@@ -59,6 +59,7 @@ a {
     padding: 0 1.875em;
     line-height: var(--height);
     outline: none;
+    border: 1px solid transparent;
     text-align: center;
     font-size: 1.6rem;
     font-weight: 600;
@@ -333,7 +334,7 @@ a {
 
 /* About */
 .about {
-    margin: 77px 0 130px;
+    margin: 77px 0 185px;
     padding-top: 53px;
 }
 
@@ -619,4 +620,116 @@ a {
     opacity: 1;
     height: 1.5px;
     background-color: currentColor;
+}
+
+/* Service */
+.service {
+    padding: 68px 0 100px;
+    background: #fff6ed;
+}
+
+.service__top {
+    text-align: center;
+}
+
+.service__desc {
+    color: #5e6085;
+    font-family: "Sora", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.service__body {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    margin-top: 71px;
+    column-gap: 71px;
+}
+
+.service-item {
+    max-width: 294px;
+    padding: 30px 28px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 188, 122, 0.26);
+    background: #fff;
+}
+
+.service-item + .service-item {
+    margin-top: 24px;
+}
+
+.service-item__heading {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    color: #000958;
+    font-family: Sora;
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.service-item__heading::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 2px;
+    border-radius: 99px;
+    background: linear-gradient(to bottom, #ff5b2e 0.39%, #ffa187 100.29%);
+}
+
+.service-item__desc {
+    margin-top: 18px;
+    color: #656689;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.71;
+}
+
+.service-item__more {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 24px;
+    color: #34396a;
+    font-family: "Sora", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.service__media {
+    position: relative;
+    margin-top: 17px;
+}
+
+.service__media::after {
+    content: "";
+    position: absolute;
+    inset: 243px 15px 0;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #9df1fb 0%, #73d0db 108.14%);
+}
+
+.service__img {
+    position: relative;
+    display: block;
+    z-index: 1;
+    width: 100%;
+}
+
+.service__cta-wrap {
+    margin-top: 45px;
+    text-align: center;
+}
+
+.service__cta {
+    min-width: 214px;
+    background: transparent;
+    color: var(--primary-color);
+    font-weight: 500;
+    border-color: rgba(255, 91, 46, 0.6);
 }
