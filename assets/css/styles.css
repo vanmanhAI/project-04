@@ -628,10 +628,13 @@ a {
     background: #fff6ed;
 }
 
+.staff-item__info,
+.staff__top,
 .service__top {
     text-align: center;
 }
 
+.staff__desc,
 .service__desc {
     color: #5e6085;
     font-family: "Sora", sans-serif;
@@ -726,10 +729,116 @@ a {
     text-align: center;
 }
 
+.staff__cta,
 .service__cta {
     min-width: 214px;
     background: transparent;
     color: var(--primary-color);
     font-weight: 500;
     border-color: rgba(255, 91, 46, 0.6);
+}
+
+/* Staff */
+.staff {
+    padding: 130px 0;
+}
+
+.staff__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 35px;
+    margin-top: 45px;
+}
+
+.staff-item__img-wrap {
+    position: relative;
+    margin: 0 16px;
+    border-radius: 129.5px;
+}
+
+.staff-item__img-wrap::before {
+    content: "";
+    position: absolute;
+    inset: 19px 0 0;
+    background: linear-gradient(180deg, #90ccff 0%, #59a8eb 95.96%);
+    border-radius: inherit;
+}
+
+.staff-item__img-wrap::after {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    inset: 0 -18px;
+    background-position: bottom;
+    background-size: 100% auto;
+}
+
+.staff-item:nth-child(1) .staff-item__img-wrap::after {
+    background-image: url(../img/staff-decor-01.svg);
+}
+
+.staff-item:nth-child(2) .staff-item__img-wrap::before {
+    background: linear-gradient(180deg, #ff997e 0%, #f3752e 100%);
+}
+
+.staff-item:nth-child(2) .staff-item__img-wrap::after {
+    background-image: url(../img/staff-decor-02.svg);
+}
+
+.staff-item:nth-child(3) .staff-item__img-wrap::before {
+    background: linear-gradient(180deg, #fabf3e 0%, #ffa14a 100%);
+}
+
+.staff-item:nth-child(3) .staff-item__img-wrap::after {
+    background-image: url(../img/staff-decor-03.svg);
+}
+
+.staff-item:nth-child(4) .staff-item__img-wrap::before {
+    background: linear-gradient(180deg, #5bd6e2 0%, #00a7cc 100%);
+}
+
+.staff-item:nth-child(4) .staff-item__img-wrap::after {
+    background-image: url(../img/staff-decor-04.svg);
+}
+
+.staff-item:nth-child(even) .staff-item__img-wrap::after {
+    background-position: top 19px left;
+}
+
+.staff-item__img {
+    position: relative;
+    display: block;
+    z-index: 1;
+    width: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+.staff-item__info {
+    margin-top: 34px;
+}
+
+.staff-item__title {
+    color: #656689;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.staff-item__name {
+    margin-top: 14px;
+    color: #000958;
+    font-family: Sora;
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.staff__cta-wrap {
+    margin-top: 48px;
+    text-align: center;
+}
+
+.staff__cta {
+    min-width: 193px;
 }
